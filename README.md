@@ -11,3 +11,12 @@ docker run --rm -it \
   -v "$PWD":/workspace \
   -v "$PWD/pcdet_ws":/pcdet_ws \
   ros2-foxy-focal:gpu
+```
+
+```bash
+# docker 등록
+sudo nvidia-ctk runtime configure --runtime=docker 
+
+# 확인
+sudo docker run --rm --gpus all nvidia/cuda:11.8.0-base-ubuntu22.04 nvidia-smi
+```
